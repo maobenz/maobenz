@@ -6,6 +6,8 @@
 	--accent: #1d5f8f;
 	--accent-dark: #123f62;
 	--accent-soft: #eaf3f8;
+	--success: #258653;
+	--success-soft: #ecf8f1;
 	--line: #d9e2e9;
 	--shadow: 0 18px 55px rgba(27, 48, 67, 0.11);
 }
@@ -140,6 +142,49 @@ footer {
 	text-decoration-color: rgba(29, 95, 143, 0.35);
 }
 
+.job-market {
+	display: grid;
+	grid-template-columns: auto minmax(0, 1fr);
+	gap: 0.7rem;
+	align-items: start;
+	max-width: 36rem;
+	margin-top: 1.25rem;
+	padding: 0.8rem 0.95rem;
+	border: 1px solid #cce7d7;
+	border-radius: 5px;
+	background: var(--success-soft);
+}
+
+.status-dot {
+	width: 0.58rem;
+	height: 0.58rem;
+	margin-top: 0.43rem;
+	border-radius: 50%;
+	background: var(--success);
+	box-shadow: 0 0 0 4px rgba(37, 134, 83, 0.12);
+}
+
+.job-market strong {
+	display: block;
+	margin-bottom: 0.15rem;
+	color: #185f3a;
+	font-family: "Avenir Next", Avenir, "Trebuchet MS", sans-serif;
+	font-size: 0.88rem;
+}
+
+.job-market p {
+	margin: 0;
+	color: #3f5f4c;
+	font-size: 0.9rem;
+	line-height: 1.48;
+}
+
+.job-market a {
+	color: #17643c;
+	font-weight: 700;
+	text-decoration: underline;
+}
+
 .social-links {
 	display: flex;
 	flex-wrap: wrap;
@@ -199,13 +244,6 @@ footer {
 .research-list li::marker,
 .service-list li::marker {
 	color: var(--accent);
-}
-
-.availability {
-	margin-top: 1.4rem;
-	padding: 0.85rem 1rem;
-	border-left: 3px solid var(--accent);
-	background: var(--accent-soft);
 }
 
 .news-list {
@@ -401,8 +439,9 @@ footer p {
 	margin: 0;
 }
 
-.visitor-counter img {
+.visitor-counter {
 	display: block;
+	height: 20px;
 }
 
 @keyframes page-in {
