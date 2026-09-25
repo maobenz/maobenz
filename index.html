@@ -6,17 +6,43 @@
 	<meta name="keywords" content="Weijia Mao, multimodal learning, vision-language models, video generation, reinforcement learning">
 	<meta name="description" content="Weijia Mao is a Ph.D. candidate at the National University of Singapore, working on vision-language models, multimodal reinforcement learning, and video generation.">
 	<link rel="icon" href="./figures/world.png" type="image/png">
+	<script>
+		(function () {
+			try {
+				var savedMode = localStorage.getItem("weijia-mode");
+				var legacyTheme = localStorage.getItem("weijia-theme");
+				if (savedMode === "off-duty" || (!savedMode && legacyTheme === "nox")) {
+					document.documentElement.dataset.mode = "off-duty";
+				}
+			} catch (error) {
+				// Academic mode remains the safe default when storage is unavailable.
+			}
+		})();
+	</script>
 	<link rel="stylesheet" href="./index_files/jemdoc.css" type="text/css">
 	<title>Weijia Mao | Ph.D. Candidate at NUS</title>
 </head>
 
 <body>
 	<main class="site-shell">
+		<div class="mode-controls">
+			<button class="mode-toggle" id="mode-toggle" type="button" aria-pressed="false" aria-label="Switch to Off-Duty mode">
+				<span class="mode-choice" data-mode-choice="academic">Academic</span>
+				<span class="mode-switch" aria-hidden="true"></span>
+				<span class="mode-choice" data-mode-choice="off-duty"><span class="mode-star" aria-hidden="true">✦</span> Off-Duty</span>
+			</button>
+		</div>
 		<header class="profile">
 			<div class="profile-copy">
-				<p class="eyebrow">National University of Singapore</p>
-				<h1>Weijia Mao</h1>
-				<p class="role">Ph.D. Candidate · Show Lab</p>
+				<p class="eyebrow">
+					<span data-mode-copy="academic">National University of Singapore</span>
+					<span data-mode-copy="off-duty">After hours, somewhere between pages</span>
+				</p>
+				<h1 id="profile-name">Weijia Mao</h1>
+				<p class="role">
+					<span data-mode-copy="academic">Ph.D. Candidate · Show Lab</span>
+					<span data-mode-copy="off-duty">Mysteries, moving pictures, and coffee chats</span>
+				</p>
 				<p class="affiliation">
 					<a href="https://sites.google.com/view/showlab">Show Lab</a><br>
 					<a href="https://www.nus.edu.sg/">National University of Singapore</a>
@@ -26,7 +52,7 @@
 					<span class="status-dot" aria-hidden="true"></span>
 					<div>
 						<strong>On the job market</strong>
-						<p>I am exploring industry opportunities in multimodal AI and generative models. If I could be a fit for your team, <a href="mailto:weijia.mao@u.nus.edu">please get in touch</a>.</p>
+						<p>I am exploring industry opportunities in multimodal AI and generative models. If I could be a fit for your team, <a href="mailto:weijia.mao@u.nus.edu">please get in touch</a>. You are also always welcome to reach out for an online or in-person coffee chat.</p>
 					</div>
 				</div>
 				<nav class="social-links" aria-label="Academic and professional profiles">
@@ -37,6 +63,12 @@
 					<a class="social-link" href="https://github.com/maobenz" aria-label="Weijia Mao on GitHub">
 						<img src="./index_files/github.png" alt="" aria-hidden="true">
 						<span>GitHub</span>
+					</a>
+					<a class="social-link coffee-link" href="mailto:weijia.mao@u.nus.edu?subject=Coffee%20Chat" aria-label="Invite Weijia Mao for a coffee chat">
+						<svg viewBox="0 0 24 24" aria-hidden="true">
+							<path d="M4 7h12v6a5 5 0 0 1-5 5H9a5 5 0 0 1-5-5V7Zm12 2h1.5a2.5 2.5 0 0 1 0 5H16M7 3v2m4-2v2"/>
+						</svg>
+						<span>Coffee Chat</span>
 					</a>
 				</nav>
 			</div>
@@ -59,6 +91,7 @@
 		<section aria-labelledby="news-heading">
 			<h2 id="news-heading">News</h2>
 			<ul class="news-list">
+				<li><time datetime="2026-09">2026 Sep</time><span><a href="https://bitdance.csuhan.com/">BitDance</a> was accepted to NeurIPS 2026.</span></li>
 				<li><time datetime="2026-06">2026 Jun</time><span><a href="https://nvlabs.github.io/AnyFlow/">AnyFlow</a> was accepted to ECCV 2026 as an oral presentation.</span></li>
 				<li><time datetime="2026-02">2026 Feb</time><span><a href="https://github.com/showlab/Adv-GRPO">Adv-GRPO</a> was accepted to CVPR 2026.</span></li>
 				<li><time datetime="2025-11">2025 Nov</time><span>Released <a href="https://github.com/showlab/Adv-GRPO">Adv-GRPO</a>, introducing adversarial training into reinforcement learning for image quality optimization.</span></li>
@@ -124,7 +157,7 @@
 					<div class="publication-copy">
 						<h3><a href="https://bitdance.csuhan.com/">BitDance: Scaling Autoregressive Generative Models with Binary Tokens</a></h3>
 						<p class="authors">Yuang Ai, Jiaming Han, Shaobin Zhuang, <strong>Weijia Mao</strong>, Xuefeng Hu, Ziyan Yang, Zhenheng Yang, Huaibo Huang, Xiangyu Yue, Hao Chen</p>
-						<p class="venue">arXiv 2026</p>
+						<p class="venue">NeurIPS 2026</p>
 						<p class="publication-links"><a href="https://bitdance.csuhan.com/">Project</a><a href="https://arxiv.org/abs/2602.14041">Paper</a><a href="https://github.com/shallowdream204/BitDance">Code</a></p>
 					</div>
 				</article>
@@ -177,10 +210,72 @@
 			</ul>
 		</section>
 
+		<section aria-labelledby="beyond-heading">
+			<h2 id="beyond-heading">Beyond Research</h2>
+			<div class="magic-card">
+				<div class="magic-copy">
+					<p class="magic-kicker">Life beyond the lab</p>
+					<h3>Soundtracks and new horizons.</h3>
+					<p>Outside research, I enjoy discovering music, travelling, and exchanging stories over coffee.</p>
+					<div class="life-grid">
+						<article class="life-item">
+							<span class="life-number" aria-hidden="true">01</span>
+							<h4>Music</h4>
+							<p>What is on repeat, new discoveries, and the songs tied to particular moments.</p>
+						</article>
+						<article class="life-item">
+							<span class="life-number" aria-hidden="true">02</span>
+							<h4>Travelling</h4>
+							<p>New cities, local food, long walks, and the memorable detours along the way.</p>
+						</article>
+					</div>
+					<p class="off-duty-note">Coffee chats are always welcome, online or in person. No formal invitation required.</p>
+				</div>
+				<img class="flying-orb" src="./figures/magic-winged-orb.png" alt="" aria-hidden="true" decoding="async">
+			</div>
+		</section>
+
 		<footer>
 			<img class="visitor-counter" src="https://views-counter.vercel.app/badge?pageId=maobenz%2Fmaobenz-homepage&amp;label=Page%20Views&amp;leftColor=5F6D7C&amp;rightColor=1D5F8F&amp;type=total" alt="Page view counter" referrerpolicy="no-referrer">
 			<p>&copy; 2026 Weijia Mao</p>
 		</footer>
 	</main>
+	<script>
+		(function () {
+			var toggle = document.getElementById("mode-toggle");
+			var shell = document.querySelector(".site-shell");
+
+			function syncToggle() {
+				var isOffDuty = document.documentElement.dataset.mode === "off-duty";
+				toggle.setAttribute("aria-pressed", String(isOffDuty));
+				toggle.setAttribute("aria-label", isOffDuty ? "Switch to Academic mode" : "Switch to Off-Duty mode");
+			}
+
+			syncToggle();
+			toggle.addEventListener("click", function () {
+				var nextMode = document.documentElement.dataset.mode === "off-duty" ? "academic" : "off-duty";
+				if (nextMode === "off-duty") {
+					document.documentElement.dataset.mode = "off-duty";
+				} else {
+					delete document.documentElement.dataset.mode;
+				}
+
+				try {
+					localStorage.setItem("weijia-mode", nextMode);
+				} catch (error) {
+					// Mode switching still works for the current visit.
+				}
+
+				shell.classList.remove("spell-cast");
+				window.requestAnimationFrame(function () {
+					shell.classList.add("spell-cast");
+				});
+				window.setTimeout(function () {
+					shell.classList.remove("spell-cast");
+				}, 850);
+				syncToggle();
+			});
+		})();
+	</script>
 </body>
 </html>
